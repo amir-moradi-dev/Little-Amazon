@@ -1,0 +1,40 @@
+.checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    background-color: white;
+    height: max-content;
+}
+
+.checkout__ad {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.checkout__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout__title>h2 {
+    padding: 22px;
+    width: 50%;
+    box-shadow: 1px 1px 12px #ff9f00;
+    background: #ffedce;
+    font-size: larger;
+    letter-spacing: 7px;
+    border: 2px solid #ffd368;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6c4d18;
+}
+
+.checkout__left {
+    display: flex;
+    flex-direction: column;
+}
