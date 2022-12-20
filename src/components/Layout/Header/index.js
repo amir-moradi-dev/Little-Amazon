@@ -2,28 +2,52 @@ import React, {useEffect} from "react"
 import './index.css'
 import {LocalGroceryStore, Search, Storefront} from "@mui/icons-material";
 import {Link} from "react-router-dom";
-import {useStateValue} from "../../../store/StateProvider";
+import {useDispatch, useStateValue} from "../../../store/StateProvider";
+import {SITE_NAME} from "../../../config/site";
 
 function Header() {
 
     const basket= useStateValue('basket')
     const user = useStateValue('user')
+    const dispatch = useDispatch()
 
     useEffect(()=>{},[user])
 
+    function logUserOut() {
+        dispatch({
+            type: 'LOGGED_OUT'
+        })
+    }
+
     function showUserAccount() {
-        return (
 
-            <Link className={'nav__item'} to={'login'}>
-                <span className={'nav__itemLineOne'}>
-                        Hello {user ? user.email : 'Guest'}
-                </span>
-                <span className={'nav__itemLineTwo'}>
-                    {user ? 'Sign Out' : 'Sign In'}
-                </span>
-            </Link>
 
-        )
+            if(!user) {
+                return <>
+                    <Link className={'nav__item'} to={'login'}>
+                        <span className={'nav__itemLineOne'}>
+                                Hello My Friend
+                        </span>
+                        <span className={'nav__itemLineTwo'}>
+                                Sign In
+                        </span>
+                    </Link>
+                </>
+            }
+
+            return <>
+                <Link className={'nav__item'} to={'/'} onClick={logUserOut}>
+                    <span className={'nav__itemLineOne'}>
+                        Welcome Back {user.email}
+                    </span>
+                    <span className={'nav__itemLineTwo'}>
+                        Sign Out
+                    </span>
+                </Link>
+            </>
+
+
+
     }
 
     return (
@@ -31,7 +55,7 @@ function Header() {
 
             <Link className={'header__logo'} to={'/'} >
                 <Storefront className={'header__logoImage'} fontSize={'large'}/>
-                <h2 className={'header__logoTitle'}>Little-Amazon</h2>
+                <h2 className={'header__logoTitle'}>{SITE_NAME}</h2>
             </Link>
 
             <div className={'header__search'}>

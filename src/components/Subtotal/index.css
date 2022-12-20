@@ -1,13 +1,15 @@
 .subtotal {
     font-family: cursive;
     display: flex;
-    min-width: 233px;
     padding: 10px;
     height: 66px;
-    background-color: #f3f3f3;
-    border: 1px solid #dddddd;
+    background-color: #4caf502e;
     align-items: center;
     justify-content: center;
+}
+
+.subtotal>strong {
+    font-size: 22px;
 }
 
 .subtotal__gift {

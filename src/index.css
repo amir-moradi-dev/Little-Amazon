@@ -1,6 +1,18 @@
+@font-face {
+  font-family: 'SegoeUI';
+  src: url(../public/fonts/SegoeUI/SegoeUI.woff2) format('woff2');
+  src: url(../public/fonts/SegoeUI/SegoeUI.ttf) format('ttf');
+  src: url(../public/fonts/SegoeUI/SegoeUI.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 body {
   margin: 0;
-  font-family: serif;
+  font-family: 'SegoeUI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

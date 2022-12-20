@@ -1,0 +1,21 @@
+.footer {
+    background: #131921;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.footer>h3 {
+    display: flex;
+    align-items: center;
+}
+
+.footer>h3>span {
+    color: orange;
+    padding: 0 4px;
+    font-size: 18px;
+}

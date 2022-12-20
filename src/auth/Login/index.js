@@ -5,6 +5,7 @@ import {AlternateEmail, Error, Lock, Login as LoginIcon, NewReleases, Storefront
 import {auth} from "../../config/firebase"
 import {getAuth,signInWithEmailAndPassword,createUserWithEmailAndPassword} from "firebase/auth";
 import {useDispatch} from "../../store/StateProvider";
+import {SITE_NAME} from "../../config/site";
 
 function Index() {
     const navigateTo = useNavigate()
@@ -79,7 +80,7 @@ function Index() {
             <Link to='/' style={{ textDecoration: "none" }}>
                 <div className="login__logo">
                     <Storefront className="login__logoImage" fontSize="large" />
-                    <h2 className="login__logoTitle">Little-Amazon</h2>
+                    <h2 className="login__logoTitle">{SITE_NAME}</h2>
                     <Storefront className="login__logoImage" fontSize="large" />
                 </div>
             </Link>
@@ -96,7 +97,7 @@ function Index() {
                     </button>
                 </form>
                 <p>
-                    By signing-in you agree to the Little-Amazon Website Conditions of Use & Sale. Please
+                    By signing-in you agree to the {SITE_NAME} Website Conditions of Use & Sale. Please
                     see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
                 </p>
                 <button className='login__registerButton' onClick={signUp}>

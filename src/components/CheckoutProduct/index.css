@@ -1,10 +1,12 @@
 .checkoutProduct {
-    background: #ff9f001c;
+    background: #ff9f001a;
     display: flex;
     padding: 11px;
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
+    align-items: center;
+    box-shadow: -5px -3px 6px #cfc9bf;
 }
 
 .checkoutProduct__info {
@@ -33,12 +35,8 @@
 .checkoutProduct__title {
     margin-right: 10px;
     padding: 27px;
-    background-color: #ff9f0036;
-    border-radius: 6px;
+    background-color: #ff9f001f;
     font-size: large;
-    box-shadow: -2px 1px 7px 0px #ff9f00;
-    width: 50%;
-    border: 1px solid lightgray;
 }
 
 .checkout__removeFromBasket {
